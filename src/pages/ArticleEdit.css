@@ -1,0 +1,62 @@
+.edit-card {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 32px;
+  margin-top: 8px;
+}
+
+.edit-title {
+  font-size: 22px;
+  margin-bottom: 24px;
+  color: var(--color-text);
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-item label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+/* 正文输入框 */
+.textarea {
+  resize: vertical;
+  min-height: 240px;
+  line-height: 1.7;
+  font-family: inherit;
+}
+
+.edit-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+@media (max-width: 768px) {
+  .edit-card {
+    padding: 20px 16px;
+  }
+  .edit-title {
+    font-size: 19px;
+  }
+  .edit-actions {
+    flex-direction: column-reverse;  /* 主按钮在上 */
+  }
+  .edit-actions .btn {
+    width: 100%;
+  }
+}
