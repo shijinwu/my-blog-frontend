@@ -5,7 +5,7 @@ import "./Auth.css";
 
 export default function Register() {
   const navigate = useNavigate();
-  const [form, setForm] = useState({ username: "", password: "" });
+  const [form, setForm] = useState({ username: "",email: "", password: "" });
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -46,6 +46,18 @@ export default function Register() {
               value={form.username}
               onChange={handleChange}
               placeholder="取一个用户名"
+              required
+            />
+          </div>
+          
+          <div className="form-item">
+            <label>邮箱</label>
+            <input
+              className="input"
+              name="email"
+              value={form.email}
+              onChange={handleChange}
+              placeholder="请输入邮箱"
               required
             />
           </div>
